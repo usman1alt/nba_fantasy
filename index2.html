@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <!-- basic.html -->
+  <title>The Rucker Fantasy</title>
+  <meta name="viewport" content="width=1300">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<div id="header">
+  <img src="headerLogo.png"></img>
+  <hr>
+</div>
+
+<body>
+
+  <marquee style="color: red" behavior="scroll" direction="left">NEW: 2 Transactions allowed per team before the Playoffs</marquee>
+
+  <hr>
+
+  <div id="score_div" class="main-div">
+    <img src="score.png"></img>
+      <p id= "score"></p>
+  </div>
+
+  <div id="playerScore" class="main-div">
+    <img src="top3.png"></img>
+    <div class="row">
+        <div class="column" style="background-color:white;">
+          <h2>Amir Tramps</h2>
+          <p id="players_tramps"></p>
+        </div>
+
+        <div class="column" style="background-color:white;">
+          <h2>Ring Beggars</h2>
+          <p id="players_beggars"></p>
+        </div>
+
+        <div class="column" style="background-color:white;">
+          <h2>Slougie Pop Nation</h2>
+          <p id="players_slougie"></p>
+        </div>
+
+        <div class="column" style="background-color:white;">
+          <h2>The Squirters</h2>
+          <p id="players_sq"></p>
+        </div>
+
+        <div class="column" style="background-color:white;">
+          <h2>Vancouver A's</h2>
+          <p id="players_van"></p>
+        </div>
+    </div>
+  </div> 
+
+  <div id="chat">
+    <script id="cid0020000257402905969" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 250px;height: 350px;">{"handle":"ruckerfantasy","arch":"js","styles":{"a":"000000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000000","l":"000000","m":"000000","n":"FFFFFF","p":"10","q":"000000","r":100,"t":0,"allowpm":0,"cnrs":"0.35","fwtickm":1}}</script>
+  </div>
+
+
+  <div id="Transactions" class="main-div, right">
+
+    <img src="transactions.png"></img>
+    <br>
+    <div id="submission">
+      <textarea id="tran" placeholder ="Submit transaction request" rows="4" cols="40"></textarea>
+      <button id="submit" type="button" onclick="addData()">Submit</button>
+      <br><br>
+      <img id="pendingLogo" src="pending.png"></img>
+    </div>
+    
+    <h5 id="pending"></h5>
+
+  </div> 
+
+
+<img id ="fullscore" src="fullscore.png"></img>
+<div class="dropdown">
+  <a href="fullscores.html"><button class="dropbtn">Click Here</button></a>
+  <div id="myDropdown" class="dropdown-content">
+    <p id = "fullTramp"></p>
+  </div>
+  <hr>
+</div>
+
+
+
+
+<div id="freeAgs" class="main-div">
+    <img src="free agents.png"></img>
+    
+    <div id="table">
+      <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-za14">                             <span style="font-weight:bold"> Hassan Whiteside</span><br><br><br><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4262.png&w=350&h=254" alt="Hassan Whiteside" width="175" height="114"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0pky">                             <span style="font-weight:bold"> Fred VanVleet</span><br><br><br><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991230.png&w=350&h=254" width="175" height="114"></td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">                             <span style="font-weight:bold"> DeAndre Ayton</span><br><br><br><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278129.png&w=350&h=254" alt="Image" width="175" height="114"></td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">                             <span style="font-weight:bold"> Buddy Hield</span><br><br><br><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2990984.png&w=350&h=254" alt="Image" width="175" height="114"></td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">                             <span style="font-weight:bold">DeMar Derozan</span><br><br><br><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3978.png&w=350&h=254" width="175" height="114"></td>
+          </tr>
+        </tbody>
+        </table>
+    </div>
+
+  </div> 
+
+  <div id="playerList" class="main-div">
+    <img src="roster.png"></img>
+    <p id= "players"></p>
+
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;background-color: #fff}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+    .tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-0pky"><span style="font-weight:bold">AmirsTramps</span></th>
+        <th class="tg-fymr">RingBeggars</th>
+        <th class="tg-fymr">SlougiePopNation</th>
+        <th class="tg-fymr">TheSquirters</th>
+        <th class="tg-fymr">VancouverA's</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-za14">Anthony Davis</td>
+        <td class="tg-za14">Luka Doncic</td>
+        <td class="tg-za14">Giannis Antetokounmpo</td>
+        <td class="tg-za14">James Harden</td>
+        <td class="tg-za14">LeBron James</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Russell Westbrook</td>
+        <td class="tg-0pky">Damian Lillard</td>
+        <td class="tg-0pky">Pascal Siakam</td>
+        <td class="tg-0pky">Kahwi Leonard</td>
+        <td class="tg-0pky">Bam Abedabyo</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Paul George</td>
+        <td class="tg-0pky">Nikola Jokic</td>
+        <td class="tg-0pky">Brandon Ingram</td>
+        <td class="tg-0pky">Jayson Tatum</td>
+        <td class="tg-0pky">Miles Turner</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Joel Embiid</td>
+        <td class="tg-0pky">Ben Simmons</td>
+        <td class="tg-0pky">Kemba Walker</td>
+        <td class="tg-0pky">Khris Middleton</td>
+        <td class="tg-0pky">Dwight Howard</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Kyle Lowry</td>
+        <td class="tg-0pky">Chris Paul</td>
+        <td class="tg-0pky">Michael Porter Jr</td>
+        <td class="tg-0pky">Jimmy Butler</td>
+        <td class="tg-0pky">Jaylen Brown</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Kristaps Porzingis</td>
+        <td class="tg-0pky">Nikola Vucevic</td>
+        <td class="tg-0pky">Evan Fournier</td>
+        <td class="tg-0pky">Donovan Mitchell</td>
+        <td class="tg-0pky">Dion Waiters</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Bol Bol</td>
+        <td class="tg-0pky">Tobias Harris</td>
+        <td class="tg-0pky">Rudy Gobert</td>
+        <td class="tg-0pky">Shai Gilgeous-Alexander</td>
+        <td class="tg-0pky">Tim Hardaway Jr.</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">CJ McCollum</td>
+        <td class="tg-0pky">Lou Williams</td>
+        <td class="tg-0pky">Devin Booker</td>
+        <td class="tg-za14">Jamal Murray</td>
+        <td class="tg-0pky">Caris Levert</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Kyle Kuzma</td>
+        <td class="tg-0pky">Gordon Hayward</td>
+        <td class="tg-0pky">Ja Morant</td>
+        <td class="tg-0pky">Jusuf Nurkic</td>
+        <td class="tg-0pky">Javale Mcgee</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Danny Green</td>
+        <td class="tg-0pky">Danillo Galinari</td>
+        <td class="tg-0pky">Brook Lopez</td>
+        <td class="tg-0pky">Jonas Valanciunas</td>
+        <td class="tg-za14">Kentavious Caldwell-Pope</td>
+      </tr>
+    </tbody>
+    </table>
+  </div> 
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+
+<head>
+  <!-- basic.html -->
+  <title>The Rucker Fantasy</title>
+  <meta name="viewport" content="width=500">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<div id="header">
+  <img src="headerLogo.png"></img>
+  <hr>
+</div>
+
+<body>
+  
+    <marquee style="color: red" behavior="scroll" direction="left">NEW: 2 Transactions allowed per team before the Playoffs</marquee>
+  
+    <hr>
+    <div id="content">
+      <div id="score_div" class="main-div">
+        <img src="score.png"></img>
+        <p id= "score"></p>
+        <hr>
+      </div>
+      <br>
+      <img id ="nba" src="nba.png"></img>
+      <div id="nbaScores"> 
+            <table id ="scores">
+              <tr>
+                <td id="Home" class ="cul"></td>
+                <td id="Away" class ="cul"></td>
+                <td id="time" class ="cul"></td>
+              </tr>
+            </table>
+      </div>
+      <hr>
+      <div id="standings">
+        <h3>East Standings</h3>
+        <iframe frameborder="0"  scrolling="no" width="310" height="440" src="https://statsdream.com/basketball/usa/nba/iframe/?type=table&sport=4&country=231&template=824&conference=Eastern Conference&team=&timezone=Pacific/Midway&time=24&po=1&ma=1&wi=1&los=1&pts=0&ng=1&form=1&width=520&height=700&font=Verdana&fs=12&lh=22&bg=FFFFFF&fc=333333&logo=1&tlink=1&ths=1&thb=1&thba=FFFFFF&thc=000000&bc=dddddd&hob=f5f5f5&hobc=ebe7e7&lc=333333&sh=1&hfb=1&hbc=ffa200&hfc=FFFFFF"></iframe><div style="text-align:center;"></div>
+        <h3>West Standings</h3>
+        <iframe frameborder="0"  scrolling="no" width="310" height="442" src="https://statsdream.com/basketball/usa/nba/iframe/?type=table&sport=4&country=231&template=824&conference=Western Conference&team=&timezone=Pacific/Midway&time=24&po=1&ma=1&wi=1&los=1&pts=0&ng=1&form=1&width=520&height=700&font=Verdana&fs=12&lh=22&bg=FFFFFF&fc=333333&logo=1&tlink=1&ths=1&thb=1&thba=FFFFFF&thc=000000&bc=dddddd&hob=f5f5f5&hobc=ebe7e7&lc=333333&sh=1&hfb=1&hbc=ffa200&hfc=FFFFFF"></iframe><div style="text-align:center;"></div>
+    </div>
+      <hr>
+            <!-- 2. And this will be the outputted markup -->
+      <br>
+      <div id="fulllines">
+        <img id ="fullscore" src="fullscore.png"></img>
+        <h2 id="a">  Amir Tramps</h2>
+        <p id="allTramps"></p>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script>
+          d3.csv("AmirTramps.csv").then(function(data) {
+            console.log(data[0]);
+        
+          let keys = Object.keys(data);
+          let player = document.getElementById("allTramps");
+          
+          
+          //var myItem = document.createElement("li");
+        
+          for (let i = 0; i<keys.length-1; i++) {
+            player.innerHTML += '<img style="width: 14%; height: 14%" src="' + data[keys[i]].Image + '" />' + data[keys[i]].Player_Name + ": " +
+              data[keys[i]].Points + "<br/>"; 
+          }
+          
+        
+          });
+        
+          
+        </script>
+        <hr>
+        <h2 id="a">  Ring Beggars</h2>
+        <p id="allBeggars"></p>
+        <script>
+          d3.csv("RingBeggars.csv").then(function(data) {
+          console.log(data[0]);
+        
+        let keys = Object.keys(data);
+        let player = document.getElementById("allBeggars");
+        
+        
+        //var myItem = document.createElement("li");
+        
+        for (let i = 0; i<keys.length-1; i++) {
+          player.innerHTML += '<img style="width: 14%; height: 14%" src="' + data[keys[i]].Image + '" />' + data[keys[i]].Player_Name + ": " +
+            data[keys[i]].Points + "<br/>"; 
+        }
+        
+        
+        });
+        
+        
+        </script>
+        <hr>
+        <h2 id="a">  Slougie Pop Nation</h2>
+        <p id="allpop"></p>
+        <script>
+          d3.csv("SlougiePopNation.csv").then(function(data) {
+          console.log(data[0]);
+        
+        let keys = Object.keys(data);
+        let player = document.getElementById("allpop");
+        
+        
+        //var myItem = document.createElement("li");
+        
+        for (let i = 0; i<keys.length-1; i++) {
+          player.innerHTML += '<img style="width: 14%; height: 14%" src="' + data[keys[i]].Image + '" />' + data[keys[i]].Player_Name + ": " +
+            data[keys[i]].Points + "<br/>"; 
+        }
+        
+        
+        });
+        
+        
+        </script>
+        <hr>
+        <h2 id="a">  The Squirters</h2>
+        <p id="allsq"></p>
+        <script>
+          d3.csv("TheSquirters.csv").then(function(data) {
+          console.log(data[0]);
+        
+        let keys = Object.keys(data);
+        let player = document.getElementById("allsq");
+        
+        
+        //var myItem = document.createElement("li");
+        
+        for (let i = 0; i<keys.length-1; i++) {
+          player.innerHTML += '<img style="width: 14%; height: 14%" src="' + data[keys[i]].Image + '" />' + data[keys[i]].Player_Name + ": " +
+            data[keys[i]].Points + "<br/>"; 
+        }
+        
+        
+        });
+        
+        
+        </script>
+        <hr>
+        <h2 id="a">Vancouver A's</h2>
+        <p id="allvan"></p>
+        <script>
+          d3.csv("VancouverA's.csv").then(function(data) {
+          console.log(data[0]);
+        
+        let keys = Object.keys(data);
+        let player = document.getElementById("allvan");
+        
+        
+        //var myItem = document.createElement("li");
+        
+        for (let i = 0; i<keys.length-1; i++) {
+          player.innerHTML += '<img style="width: 14%; height: 14%" src="' + data[keys[i]].Image + '" />' + data[keys[i]].Player_Name + ": " +
+            data[keys[i]].Points + "<br/>"; 
+        }
+        
+        
+        });
+        
+        
+        </script>
+      </div>  
+      <hr>
+      <script src="script.js"></script>
+  </div>
+
+
+</body>
+
+</html>
+
